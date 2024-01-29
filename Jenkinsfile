@@ -48,16 +48,7 @@ pipeline {
             steps {
                 sh "trivy fs . > trivyfs.txt"
              }
-         }
-        
+         }    
     }
 }
       
-
-
-
-sonar-scanner \
-  -Dsonar.projectKey=Reddit-Clone-CI \
-  -Dsonar.sources=. \
-  -Dsonar.host.url=http://3.86.27.243:9000 \
-  -Dsonar.login=sqp_a71522c311f801f154cdf1142fef422d4cafca6d
